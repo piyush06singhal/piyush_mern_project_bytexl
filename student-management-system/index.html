@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Attendance System</h1>
+        <div class="input-section">
+            <input type="text" id="studentInput" placeholder="Enter Student Name" />
+            <button id="addBtn">Add Student</button>
+            <button id="saveBtn">Save Attendance</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Status</th>
+                    <th>Attendance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"> </tbody>
+        </table>
+
+        <div class="summary">
+            <div>Total Students: <span id="totalStudents">0</span></div>
+            <div>Present: <span id="presentCount">0</span> </div>
+            <div>Absent: <span id="absentCount">0</span> </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
