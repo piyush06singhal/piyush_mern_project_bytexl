@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FreshBite</div>
+            <button class="menu-btn" id="menuBtn">Menu</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#steps">How It Works</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart <span id="cartCount">0</span></a></li>
+                <li><a href="#checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="tagline">Fast food delivery in your city</p>
+                <h1>Order tasty food from our restaurants</h1>
+                <p>FreshBite is a simple food ordering page where you can search dishes, filter categories, manage cart
+                    quantity, and place a demo order.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="hero-btn">View Menu</a>
+                    <a href="#cart" class="outline-btn">My Cart</a>
+                </div>
+                <div class="hero-points">
+                    <span>20 min delivery</span>
+                    <span>Fresh meals</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+                    alt="Food plate with vegetables">
+            </div>
+        </section>
+
+        <section class="steps-section" id="steps">
+            <div class="section-heading">
+                <h2>How It Works</h2>
+                <p>A quick and simple flow for ordering your favorite meal.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span>1</span>
+                    <h3>Choose Food</h3>
+                    <p>Search meals or use category buttons to find what you like.</p>
+                </div>
+                <div class="step-card">
+                    <span>2</span>
+                    <h3>Add To Cart</h3>
+                    <p>Increase, decrease, or remove food items from your cart.</p>
+                </div>
+                <div class="step-card">
+                    <span>3</span>
+                    <h3>Checkout</h3>
+                    <p>Fill your details and place a simple demo order.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="menu">
+            <div class="section-heading">
+                <h2>Popular Food Near You</h2>
+                <p>Search by food name or filter dishes by category.</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search food or restaurant...">
+            </div>
+
+            <div class="category-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="burger">Burger</button>
+                <button class="filter-btn" data-category="pizza">Pizza</button>
+                <button class="filter-btn" data-category="indian">Indian</button>
+                <button class="filter-btn" data-category="dessert">Dessert</button>
+            </div>
+
+            <p class="result-text" id="resultText"></p>
+            <div class="food-grid" id="foodGrid"></div>
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="section-heading">
+                <h2>Your Cart</h2>
+                <p>Change quantity or remove items before checkout.</p>
+            </div>
+
+            <div class="cart-box">
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <strong>Total:</strong>
+                    <span id="totalPrice">Rs. 0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-section" id="checkout">
+            <div class="section-heading">
+                <h2>Checkout</h2>
+                <p>Fill in your details to place a demo order.</p>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-row">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="checkout-btn">Place Order</button>
+                <p id="orderMessage"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Piyush. Made as a simple student food delivery project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

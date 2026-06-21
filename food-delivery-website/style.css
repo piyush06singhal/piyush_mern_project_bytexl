@@ -1,0 +1,575 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: snow;
+  color: darkslategray;
+  line-height: 1.6;
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  box-shadow: 0 2px 12px lightgray;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar,
+.hero,
+.steps-section,
+.menu-section,
+.cart-section,
+.checkout-section {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.navbar {
+  min-height: 70px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: tomato;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: darkslategray;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 0;
+}
+
+.nav-links a:hover,
+.tagline {
+  color: tomato;
+}
+
+#cartCount {
+  background-color: tomato;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+.menu-btn {
+  display: none;
+  padding: 9px 13px;
+  border: none;
+  border-radius: 6px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+section {
+  padding: 58px 20px;
+}
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.hero-text,
+.hero-image {
+  flex: 1;
+}
+
+.tagline {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.12;
+  margin-bottom: 18px;
+}
+
+.hero p,
+.section-heading p,
+.restaurant,
+.cart-item p,
+.empty-cart,
+.result-text {
+  color: dimgray;
+}
+
+.hero p {
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+.hero-buttons,
+.hero-points,
+.category-buttons,
+.price-row,
+.cart-total,
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.hero-buttons {
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-btn,
+.outline-btn,
+.checkout-btn,
+.food-card button {
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.hero-btn,
+.checkout-btn,
+.food-card button {
+  background-color: tomato;
+  color: white;
+  border: none;
+}
+
+.hero-btn,
+.outline-btn,
+.checkout-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  text-decoration: none;
+}
+
+.outline-btn {
+  border: 1px solid tomato;
+  color: tomato;
+  background-color: white;
+}
+
+.hero-btn:hover,
+.checkout-btn:hover,
+.food-card button:hover {
+  background-color: orangered;
+  transform: translateY(-2px);
+}
+
+.outline-btn:hover {
+  background-color: mistyrose;
+}
+
+.hero-points {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-points span,
+.food-meta span {
+  background-color: white;
+  border: 1px solid peachpuff;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.hero-image img,
+.food-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-image img {
+  height: 390px;
+  border: 8px solid white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px silver;
+}
+
+.steps-section,
+.cart-section {
+  background-color: seashell;
+  max-width: none;
+}
+
+.steps-section > *,
+.cart-section > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+.steps-grid,
+.food-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.steps-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.step-card,
+.food-card,
+.cart-box,
+.checkout-form {
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px lightgray;
+}
+
+.step-card {
+  padding: 26px;
+  border-top: 4px solid tomato;
+}
+
+.step-card span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.step-card h3 {
+  margin-bottom: 8px;
+}
+
+.search-box {
+  max-width: 540px;
+  margin: 0 auto 20px;
+}
+
+.search-box input,
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background-color: white;
+  color: darkslategray;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input:focus,
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: tomato;
+  box-shadow: 0 0 0 3px mistyrose;
+}
+
+.category-buttons {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: 1px solid tomato;
+  border-radius: 20px;
+  background-color: white;
+  color: tomato;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: tomato;
+  color: white;
+}
+
+.result-text {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.food-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.food-card {
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px silver;
+}
+
+.food-card img {
+  height: 180px;
+}
+
+.food-info {
+  padding: 18px;
+}
+
+.food-info h3,
+.cart-item h4 {
+  margin-bottom: 6px;
+}
+
+.restaurant,
+.cart-item p {
+  font-size: 14px;
+}
+
+.food-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.food-meta span {
+  background-color: linen;
+  border: none;
+  font-size: 13px;
+}
+
+.price-row,
+.cart-total {
+  justify-content: space-between;
+}
+
+.price {
+  color: seagreen;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.food-card button {
+  padding: 9px 13px;
+}
+
+.cart-box,
+.checkout-form {
+  padding: 24px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid gainsboro;
+}
+
+.quantity-controls {
+  gap: 10px;
+}
+
+.quantity-controls button,
+.remove-btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  background-color: gainsboro;
+  font-weight: bold;
+}
+
+.quantity-controls button:hover {
+  background-color: silver;
+}
+
+.remove-btn {
+  background-color: crimson;
+  color: white;
+  padding: 8px 10px;
+}
+
+.remove-btn:hover {
+  background-color: firebrick;
+}
+
+.cart-total {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid gainsboro;
+  font-size: 21px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 18px;
+}
+
+.checkout-form {
+  max-width: 650px;
+  margin: auto;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#orderMessage {
+  margin-top: 12px;
+  color: seagreen;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  background-color: darkslategray;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    min-height: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-buttons,
+  .hero-points {
+    justify-content: center;
+  }
+
+  .food-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 42px 16px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-btn,
+  .outline-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image img {
+    height: 250px;
+  }
+
+  .food-grid,
+  .steps-grid,
+  .cart-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+
+  .cart-total {
+    font-size: 18px;
+  }
+}
